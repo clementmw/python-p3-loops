@@ -2,53 +2,29 @@
 
 
 def happy_new_year ():
-    for i in range(10, 0, -1  ):
-        print(i)
+    i = 10
+    while i > 0:
+       # print(i)
+        i -= 1
     print("Happy New Year!")
-
+     
 happy_new_year()
 
+#square integers
 
-def fizzbuzz_printer():
-    for num in range(1, 101):
-       print(fizzbuzz(num))
+square = [1,2,3,4,5]
+square_numbers = [i ** 2 for i in square]
+print (square_numbers)
 
-def fizzbuzz(num):
-    if num % 3 == 0 and num % 5 == 0:
-        return "fizzbuzz"
-    elif num % 3 == 0:
-        return "fizz"
-    elif num % 5 == 0:
-        return "buzz"
-    else:
-        return num
+def fizzbuzz():
+    for i in range (100):
+        if i%3 == 0 and i%5 == 0 :
+            print("FizzBuzz")
+        elif i%3 == 0:
+            print("Fizz")
+        elif i%5 == 0:
+            print ("Buzz")
+        else:
+            print(i)  
     
-fizzbuzz_printer()
-
-
-
-def reverse_string(str):
-    reversed_str = ""
-    for char in str:
-        reversed_str = char + reversed_str
-    return reversed_str
-
-print(reverse_string("hello"))
-
-
-
-def square_integers(int_list):
-    squared_list = []
-    for int in int_list:
-        squared_list.append(int**2)
-    return squared_list
-
-print(square_integers([1, 2, 3, 4, 5]))
-
-
-    
- 
-    
-
-
-
+fizzbuzz()
